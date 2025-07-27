@@ -1,0 +1,27 @@
+{
+  "name": "connecting-the-dots-codart",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/c0d3rk1d/connecting-the-dots-codart.git"
+  },
+  "keywords": [
+    "Code",
+    "Art",
+    "Art",
+    "Connecting",
+    "Dots.",
+    "Rough.js"
+  ],
+  "author": "Kay Anar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/c0d3rk1d/connecting-the-dots-codart/issues"
+  },
+  "homepage": "https://github.com/c0d3rk1d/connecting-the-dots-codart#readme"
+}
