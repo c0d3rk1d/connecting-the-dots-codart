@@ -16,12 +16,15 @@
     "Art",
     "Connecting",
     "Dots.",
-    "Rough.js"
+    "Roughjs"
   ],
   "author": "Kay Anar",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/c0d3rk1d/connecting-the-dots-codart/issues"
   },
-  "homepage": "https://github.com/c0d3rk1d/connecting-the-dots-codart#readme"
+  "homepage": "https://github.com/c0d3rk1d/connecting-the-dots-codart#readme",
+  "dependencies": {
+    "roughjs": "^4.6.6"
+  }
 }
