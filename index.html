@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="author" content="Kay Anar">
     <title>Connecting the Dots by Kay Anar</title>
+    <script src="./node_modules/roughjs/bundled/rough.js"></script>
     <style>
         html,
         body {
@@ -29,12 +30,40 @@
     <canvas id="codart"></canvas>
     <script>
         const canvas = document.getElementById("codart");
+        const rc = rough.canvas(canvas);
+        const ctx = canvas.getContext("2d");
+        const colors = ['#ff4d4d', '#ff944d', '#ffe24d', '#c3ff4d', '#4dff88', '#4dffff', '#4da6ff', '#b84dff', '#ff4df2'];
+        const dotCount = 100;
+        const dotSizeMin = 10;
+        const dotSizeMax = 20;
+        const dots = [];
+        const maxDistance = 150;
+        const minDistance = 50;
+        const lineWidth = 1;
+        const lineColor = '#000000';
+        const lineOpacity = 0.2;
+        const lineAlpha = 0.2;
+        const lineStyle = rc.linearPath;
+        function drawDots() {
+            for (let i = 0; i < dotCount; i++) {
+                const x = Math.random() * canvas.width;
+                const y = Math.random() * canvas.height;
+                const color = colors[Math.floor(Math.random() * colors.length)];
+                const dotSize = Math.random() * (dotSizeMax - dotSizeMin) + dotSizeMin;
+                const dot = rc.circle(x, y, dotSize, { fill: color, fillStyle: 'solid' });
+                dots.push({ x, y, dot });
+            }
+            connectDots();
+        }
         function resizeCanvas() {
             canvas.width = window.innerWidth;
             canvas.height = window.innerHeight;
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            drawDots();
         }
         window.addEventListener("resize", resizeCanvas);
         resizeCanvas();
+
     </script>
 </body>
 
